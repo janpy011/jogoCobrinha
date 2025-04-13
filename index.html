@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo da Cobrinha</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/logo (1).ico" type="image/x-icon">
 </head>
 
 <body>
@@ -13,7 +14,19 @@
         <h1>🐍 Jogo da Cobrinha</h1>
         <canvas id="gameCanvas" width="400" height="400"></canvas>
         <p id="score">Pontuação: 0</p>
+        <p id="pauseHint">Aperte <strong>Espaço</strong> ou use os botões abaixo</p>
         <button onclick="restartGame()">Reiniciar</button>
+
+        <!-- Botões de controle para mobile -->
+        <div class="mobile-controls">
+            <button onclick="setDirection('UP')">⬆️</button>
+            <div>
+                <button onclick="setDirection('LEFT')">⬅️</button>
+                <button onclick="togglePause()">⏸️</button>
+                <button onclick="setDirection('RIGHT')">➡️</button>
+            </div>
+            <button onclick="setDirection('DOWN')">⬇️</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
